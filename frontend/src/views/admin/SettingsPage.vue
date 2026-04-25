@@ -78,14 +78,17 @@
                   <v-col cols="12">
                     <v-textarea v-model="form.hero_message" label="Hero Message" variant="outlined" rows="3" />
                   </v-col>
+                  <v-col cols="12">
+                    <v-text-field v-model="form.cover_title_en" label="Hero Heading" variant="outlined" />
+                  </v-col>
+                  <v-col cols="12">
+                    <v-textarea v-model="form.closing_message_en" label="Closing Message" variant="outlined" rows="3" />
+                  </v-col>
                   <v-col cols="12" md="6">
                     <v-text-field v-model="form.venue_name" label="Venue Name" variant="outlined" />
                   </v-col>
                   <v-col cols="12" md="6">
                     <v-text-field v-model="form.venue_address" label="Venue Address" variant="outlined" />
-                  </v-col>
-                  <v-col cols="12">
-                    <v-text-field v-model="form.cover_title_en" label="Cover Title" variant="outlined" />
                   </v-col>
                   <v-col cols="12">
                     <v-textarea v-model="form.cover_subtitle_en" label="Cover Subtitle" variant="outlined" rows="3" />
@@ -98,14 +101,17 @@
                   <v-col cols="12">
                     <v-textarea v-model="form.hero_message_km" label="Hero Message Khmer" variant="outlined" rows="3" />
                   </v-col>
+                  <v-col cols="12">
+                    <v-text-field v-model="form.cover_title_km" label="Hero Heading Khmer" variant="outlined" />
+                  </v-col>
+                  <v-col cols="12">
+                    <v-textarea v-model="form.closing_message_km" label="Closing Message Khmer" variant="outlined" rows="3" />
+                  </v-col>
                   <v-col cols="12" md="6">
                     <v-text-field v-model="form.venue_name_km" label="Venue Name Khmer" variant="outlined" />
                   </v-col>
                   <v-col cols="12" md="6">
                     <v-text-field v-model="form.venue_address_km" label="Venue Address Khmer" variant="outlined" />
-                  </v-col>
-                  <v-col cols="12">
-                    <v-text-field v-model="form.cover_title_km" label="Cover Title Khmer" variant="outlined" />
                   </v-col>
                   <v-col cols="12">
                     <v-textarea v-model="form.cover_subtitle_km" label="Cover Subtitle Khmer" variant="outlined" rows="3" />
@@ -115,8 +121,11 @@
             </v-window>
 
             <v-row>
-              <v-col cols="12">
+              <v-col cols="12" md="6">
                 <v-text-field v-model="form.google_map_url" label="Google Map URL" variant="outlined" />
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-text-field v-model="form.calendar_url" label="Calendar URL" variant="outlined" />
               </v-col>
             </v-row>
           </v-card>
@@ -249,6 +258,18 @@
                   @update:model-value="uploadSettingImage($event, 'profile', 'primary_image_url')"
                 />
               </div>
+
+              <div class="settings-media-block">
+                <div class="text-subtitle-2 mb-2">Map Preview Image</div>
+                <v-img v-if="form.map_image_url" :src="form.map_image_url" height="180" cover class="rounded-lg mb-3" />
+                <v-file-input
+                  label="Upload Map Preview"
+                  accept="image/*"
+                  prepend-icon="mdi-map"
+                  variant="outlined"
+                  @update:model-value="uploadSettingImage($event, 'cover', 'map_image_url')"
+                />
+              </div>
             </div>
           </v-card>
 
@@ -305,10 +326,14 @@ const form = reactive({
   cover_title_km: '',
   cover_subtitle_en: '',
   cover_subtitle_km: '',
+  closing_message_en: '',
+  closing_message_km: '',
   cover_image_url: '',
   primary_image_url: '',
+  map_image_url: '',
   music_url: '',
   music_title: '',
+  calendar_url: '',
   background_mode: 'dark',
 });
 const events = ref([]);

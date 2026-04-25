@@ -1,0 +1,54 @@
+<svg width="1440" height="2200" viewBox="0 0 1440 2200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pageBg" x1="720" y1="0" x2="720" y2="2200">
+      <stop offset="0%" stop-color="#8E1F24"/>
+      <stop offset="55%" stop-color="#78171D"/>
+      <stop offset="100%" stop-color="#631118"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F5D98B"/>
+      <stop offset="30%" stop-color="#E0B95F"/>
+      <stop offset="65%" stop-color="#AF7A27"/>
+      <stop offset="100%" stop-color="#F6DE98"/>
+    </linearGradient>
+    <pattern id="centerMotif" width="84" height="84" patternUnits="userSpaceOnUse">
+      <rect width="84" height="84" fill="transparent"/>
+      <path d="M42 22L54 34L42 46L30 34L42 22Z" fill="#E5BD68"/>
+      <path d="M42 27L49 34L42 41L35 34L42 27Z" fill="#7A181E"/>
+      <circle cx="42" cy="34" r="2.5" fill="#F6DE98"/>
+      <path d="M12 68L18 74L12 80L6 74L12 68Z" fill="#D7A84A" opacity="0.45"/>
+      <path d="M72 68L78 74L72 80L66 74L72 68Z" fill="#D7A84A" opacity="0.45"/>
+    </pattern>
+    <pattern id="sideOrnament" width="120" height="160" patternUnits="userSpaceOnUse">
+      <rect width="120" height="160" fill="transparent"/>
+      <path d="M60 10C76 30 90 49 90 71C90 98 74 117 60 137C46 117 30 98 30 71C30 49 44 30 60 10Z" fill="#9D651F"/>
+      <path d="M60 21C71 37 80 52 80 71C80 90 69 105 60 118C51 105 40 90 40 71C40 52 49 37 60 21Z" fill="#F4D687"/>
+      <path d="M18 135L60 112L102 135L60 154L18 135Z" fill="#AF7725"/>
+      <path d="M28 135L60 118L92 135L60 149L28 135Z" fill="#F2D17E"/>
+      <path d="M60 0L68 12L60 24L52 12L60 0Z" fill="#F6DE98"/>
+    </pattern>
+    <pattern id="microTexture" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.1" fill="#B76E2A" opacity="0.14"/>
+    </pattern>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#35070E" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="2200" fill="url(#pageBg)"/>
+  <rect width="1440" height="2200" fill="url(#microTexture)"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="52" y="52" width="1336" height="2096" rx="24" stroke="url(#gold)" stroke-width="18"/>
+    <rect x="90" y="90" width="1260" height="2020" rx="18" stroke="#D8B76E" stroke-opacity="0.5" stroke-width="3"/>
+  </g>
+
+  <rect x="96" y="130" width="132" height="1940" rx="12" fill="url(#sideOrnament)"/>
+  <rect x="1212" y="130" width="132" height="1940" rx="12" fill="url(#sideOrnament)"/>
+
+  <rect x="248" y="130" width="944" height="1940" rx="20" fill="#7B181E" fill-opacity="0.24" stroke="#DAB76A" stroke-opacity="0.2" stroke-width="2"/>
+  <rect x="300" y="186" width="840" height="1828" rx="12" fill="url(#centerMotif)" opacity="0.92"/>
+
+  <path d="M248 158H1192" stroke="url(#gold)" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M248 2042H1192" stroke="url(#gold)" stroke-opacity="0.35" stroke-width="2"/>
+</svg>

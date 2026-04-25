@@ -96,7 +96,7 @@ class InvitationController extends Controller
     {
         return Setting::all()
             ->mapWithKeys(function (Setting $setting) {
-                $value = in_array($setting->key, ['cover_image_url', 'primary_image_url', 'music_url'], true)
+                $value = in_array($setting->key, ['cover_image_url', 'primary_image_url', 'map_image_url', 'music_url'], true)
                     ? $this->normalizeAssetUrl($setting->value)
                     : $setting->value;
 
